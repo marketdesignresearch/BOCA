@@ -1,0 +1,14 @@
+Cython==0.29.24
+pyjnius==1.3.0
+matplotlib
+numpyencoder
+seaborn
+pandas
+scipy
+torch
+torchinfo
+numpy
+scikit_learn
+tqdm
+docplex
+pysats
