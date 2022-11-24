@@ -13,14 +13,15 @@ import os
 from mlca.mlca_economies import MLCA_Economies
 
 
-# %% MLCA MECHANISM
-def mlca_mechanism(SATS_auction_instance_seed=None,
+# %% MECHANISM
+def mechanism(SATS_auction_instance_seed=None,
                    SATS_domain_name=None,
                    Qinit=None,
                    Qmax=None,
                    Qround=None,
                    separate_economy_training=True,
-                   new_query_option='restricted_uUB_model_MIP',
+                   new_query_option='MIP',
+                   acquisition = 'uUB',
                    balanced_global_marginals=False,
                    parallelize_training=False,
                    local_scaling_factor=None,
@@ -68,6 +69,7 @@ def mlca_mechanism(SATS_auction_instance_seed=None,
     logging.warning(f'Separate economy training: {separate_economy_training}')
     logging.warning(f'Balanced global marginals: {balanced_global_marginals}')
     logging.warning(f'New query option: {new_query_option}')
+    logging.warning(f'Acquisition: {acquisition}')
     if new_query_option=='RS':
         for k, v in RS_parameters.items():
             logging.warning(f'{k} in RS:{v}')
@@ -103,6 +105,7 @@ def mlca_mechanism(SATS_auction_instance_seed=None,
                        Qinit=Qinit, Qmax=Qmax, Qround=Qround, scaler=scaler,
                        separate_economy_training=separate_economy_training,
                        new_query_option=new_query_option,
+                       acquisition=acquisition,
                        balanced_global_marginals=balanced_global_marginals,
                        parallelize_training=parallelize_training,
                        local_scaling_factor=local_scaling_factor,

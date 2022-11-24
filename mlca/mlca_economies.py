@@ -191,6 +191,7 @@ class MLCA_Economies:
                  Qinit, Qmax, Qround,
                  separate_economy_training,
                  new_query_option,
+                 acquisition,
                  balanced_global_marginals,
                  parallelize_training,
                  scaler,
@@ -236,6 +237,7 @@ class MLCA_Economies:
         self.local_scaling_factor = local_scaling_factor
         self.separate_economy_training = separate_economy_training
         self.new_query_option = new_query_option
+        self.acquisition = acquisition
         self.balanced_global_marginals = balanced_global_marginals
         self.parallelize_training = parallelize_training
 
@@ -1421,11 +1423,13 @@ class MLCA_Economies:
                 self.estimation_step_economy(economy_key=economy_key)
             # ----------------------------------------------------------------------------
 
-            # STEP 2: Optimization of trained ML-models
+            # STEP 2: Optimization of trained models
             # ----------------------------------------------------------------------------
+            logging.info(f'USING ACQUISITION FUNCTION: {self.acquisition}')
             self.optimization_step(economy_key=economy_key,
-                                   model_type='uUB_model',
+                                   model_type=self.acquisition,
                                    bidder_specific_constraints=None)
+
             # ----------------------------------------------------------------------------
 
         # NEW BUNDLE HAS BEEN ALREADY QUERIED IN R (=elicited bids from previous iterations) OR S (=elicited bids in current iteration)
@@ -1438,11 +1442,12 @@ class MLCA_Economies:
             else:
                 Ri_union_Si = self.elicited_bids[active_bidder][0]
 
-            # OPTION 1: BIDDER SPECIFIC MIP WITH uUB_model to generate NEW QUERY
+            # OPTION 1: BIDDER SPECIFIC MIP WITH uUB_model or mean_model to generate NEW QUERY
             # ----------------------------------------------------------------------------
-            if self.new_query_option == 'restricted_uUB_model_MIP':
+            if self.new_query_option == 'restricted_MIP':
+                logging.info(f'USING ACQUISITION FUNCTION: {self.acquisition}')
                 self.optimization_step(economy_key,
-                                       model_type='uUB_model',
+                                       model_type=self.acquisition,
                                        bidder_specific_constraints={active_bidder: Ri_union_Si})
             # ----------------------------------------------------------------------------
 
