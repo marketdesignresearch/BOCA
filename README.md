@@ -62,7 +62,7 @@ To start BOCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, 
 python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=uUB_model
 ```
 
-This will create a results folder where you then find in results\LSVM\0.9 the following files
+This will create a results folder where you then find in results\LSVM\0.9\uUB_model the following files
 
 1. a configuration file: config.json
 2. a log file: log.txt
@@ -78,7 +78,7 @@ To start OUR-MVNN-MLCA for a specific quantile parameter $q$, a SATS domain (LSV
 python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=mean_model
 ```
 
-This will create a results folder where you then find in results\LSVM\0.9 the following files
+This will create a results folder where you then find in results\LSVM\0.9\mean_model the following files
 
 1. a configuration file: config.json
 2. a log file: log.txt
