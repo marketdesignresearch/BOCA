@@ -68,7 +68,7 @@ This will create a results folder where you then find in results\LSVM\0.9\uUB_mo
 2. a log file: log.txt
 3. a result file: results.json.
 
-Specifically, results.json contains the efficiency of the final allocation of the BOCA mechanism in the field "MLCA Efficiency".
+Specifically, results.json contains the efficiency of the final allocation of the BOCA mechanism in the field "MLCA Efficiency". Note that in sim_mlca.py, we set the parameters (Qinit, Qmax, Qround) = (40, 100, 4) to their default values that were used to create the results in Table 1.
 
 ### 2. OUR-MVNN-MLCA: using our mean MVNNs $\mathcal{M}_i^{\text{mean}}$ in the acquisition function $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{mean}}$. 
 
