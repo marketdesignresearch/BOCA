@@ -54,7 +54,7 @@ When you run conda activate <name_of_yur_environment> the environment variable P
 
 ## How to run
 
-### 1. BOCA: using our uUBs $\mathcal{M}_i^{\text{uUB}}$ in the acquisition function $\mathcal{A}$, i.e., $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{uUB}}$.
+### 1. BOCA: using our uUBs $\mathcal{M}_i^{\text{uUB}}$ in the acquisition function $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{uUB}}$.
 
 To start BOCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
 
@@ -70,7 +70,7 @@ This will create a results folder where you then find in results\LSVM\0.9 the fo
 
 Specifically, results.json contains the efficiency of the final allocation of the BOCA mechanism in the field "MLCA Efficiency".
 
-### 2. OUR-MVNN-MLCA: using our mean MVNNs $\mathcal{M}_i^{\text{mean}}$ in the acquisition function $\mathcal{A}$, i.e., $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{mean}}$. 
+### 2. OUR-MVNN-MLCA: using our mean MVNNs $\mathcal{M}_i^{\text{mean}}$ in the acquisition function $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{mean}}$. 
 
 To start OUR-MVNN-MLCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
 
