@@ -1,7 +1,7 @@
 # BOCA: Bayesian-Optimization-based Combinatorial Assignment
 
 This is a piece of software used for computing the efficiency of the BOCA mechanism in the spectrum auction test suite (SATS) that are shown in Table 1 of the paper
-[Bayesian-Optimization-based Combinatorial Assignment]([https://arxiv.org/abs/2109.15117](https://arxiv.org/abs/2208.14698)). The BOCA mechanism is described in detail in the this paper.
+[Bayesian-Optimization-based Combinatorial Assignment (https://arxiv.org/abs/2109.15117)](https://arxiv.org/abs/2208.14698). The BOCA mechanism is described in detail in the this paper.
 
 
 ## Requirements
