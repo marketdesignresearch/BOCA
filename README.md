@@ -59,7 +59,7 @@ When you run conda activate <name_of_yur_environment> the environment variable P
 To start BOCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
 
 ```bash
-python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=uUB
+python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=uUB_model
 ```
 
 This will create a results folder where you then find in results\LSVM\0.9 the following files
@@ -75,7 +75,7 @@ Specifically, results.json contains the efficiency of the final allocation of th
 To start OUR-MVNN-MLCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
 
 ```bash
-python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=mean
+python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=mean_model
 ```
 
 This will create a results folder where you then find in results\LSVM\0.9 the following files
