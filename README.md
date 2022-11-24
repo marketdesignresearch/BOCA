@@ -9,9 +9,10 @@ This is a piece of software used for Bayesian-Optimization-based Iterative Combi
 * Java 8 (or later)
   * Java environment variables set as described [here](https://pyjnius.readthedocs.io/en/stable/installation.html#installation)
 * JAR-files ready (they should already be)
-  * CPLEX (=20.01.0): The file cplex.jar (for 20.01.0) is provided in the folder lib. Make sure that your version of CPLEX is compatible with the cplex.jar file in the folder lib.
+  * CPLEX (=20.01.0): The file cplex.jar (for 20.01.0) is provided in the folder lib.
   * [SATS](http://spectrumauctions.org/) (=0.8.0): The file sats-0.8.0.jar is provided in the folder lib.
 * CPLEX Python API installed as described [here](https://www.ibm.com/docs/en/icos/20.1.0?topic=cplex-setting-up-python-api)
+* Make sure that your version of CPLEX is compatible with the cplex.jar file in the folder lib.
 
 ## Dependencies
 
