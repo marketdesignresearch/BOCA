@@ -1,6 +1,7 @@
-# BOCA: Bayesian-Optimization-based Iterative Combinatorial Auctions
+# BOCA: Bayesian-Optimization-based Combinatorial Assignment
 
-This is a piece of software used for Bayesian-Optimization-based Iterative Combinatorial Auctions.
+This is a piece of software used for computing the efficiency of the BOCA mechanism in the spectrum auction test suite (SATS) that are shown in Table 1 of the paper
+[Bayesian-Optimization-based Combinatorial Assignment]([https://arxiv.org/abs/2109.15117](https://arxiv.org/abs/2208.14698)). The BOCA mechanism is described in detail in the this paper.
 
 
 ## Requirements
@@ -48,15 +49,17 @@ set PYJNIUS_CLASSPATH=C:\path\to\lib\
 
 set PYJNIUS_CLASSPATH=
 
-When you run conda activate env the environment variable PYJNIUS_CLASSPATH is set to the value you wrote in the env_vars.bat file. When you run conda deactivate, this variable is erased.
+When you run conda activate <name_of_yur_environment> the environment variable PYJNIUS_CLASSPATH is set to the value you wrote in the env_vars.bat file. When you run conda deactivate, this variable is erased.
 
 
 ## How to run
 
-To run BOCA for a specific quantile parameter $q$, a SATS domain, and a seed run:
+### BOCA: with our uUB $\mathcal{M}_i^{\text{uUB}}$ as acquisition function
+
+To start BOCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
 
 ```bash
-python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001
+python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acqusition=uUB
 ```
 
 This will create a results folder where you then find in results\LSVM\0.9 the following files
@@ -65,6 +68,24 @@ This will create a results folder where you then find in results\LSVM\0.9 the fo
 2. a log file: log.txt
 3. a result file: results.json.
 
-Specifically, results.json contains the efficiency of the found MLCA allocation in the field "MLCA Efficiency".
+Specifically, results.json contains the efficiency of the final allocation of the BOCA mechanism in the field "MLCA Efficiency".
+
+
+### OUR-MVNN-MLCA: with our mean MVNN $\mathcal{M}_i^{\text{mean}}$ as acquisition function
+
+To start OUR-MVNN-MLCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
+
+```bash
+python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acqusition=mean
+```
+
+This will create a results folder where you then find in results\LSVM\0.9 the following files
+
+1. a configuration file: config.json
+2. a log file: log.txt
+3. a result file: results.json.
+
+Specifically, results.json contains the efficiency of the final allocation of the OUR-MVNN-MLCA mechanism in the field "MLCA Efficiency".
+
 
 
