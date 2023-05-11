@@ -7,7 +7,7 @@ This is a piece of software used for computing the efficiency of the BOCA mechan
 
 **BOCA: Bayesian-Optimization-based Combinatorial Assignment**<br/>
 Jakob Weissteiner, Jakob Heiss, Julien Siems, and Sven Seuken.<br/>
-*In Proceedings of the Thirty-first International joint Conference on Artificial Intelligence IJCAI'22, Vienna, AUT, July 2022.*<br/>
+*In Proceedings of the AAAI Conference on Artificial Intelligence Vol 37. Washington DC, USA, 2023.*<br/>
 Full paper version including appendix: [[pdf](https://arxiv.org/abs/2208.14698)]
 
 
