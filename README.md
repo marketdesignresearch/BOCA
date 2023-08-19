@@ -1,14 +1,10 @@
 # BOCA: Bayesian-Optimization-based Combinatorial Assignment
 
-Published at [AAAI 2023](https://aaai.org/Conferences/AAAI-23/)
+This is a piece of software used for computing the efficiency of the ML-CCA and the CCA in the spectrum auction test suite (SATS). The proposed ML-CCA is described in detail in the following paper:
 
-This is a piece of software used for computing the efficiency of the BOCA mechanism in the spectrum auction test suite (SATS) that are shown in Table 1 of the paper
-[Bayesian-Optimization-based Combinatorial Assignment](https://arxiv.org/abs/2208.14698). The BOCA mechanism is described in detail in the following paper:
-
-**BOCA: Bayesian-Optimization-based Combinatorial Assignment**<br/>
-Jakob Weissteiner, Jakob Heiss, Julien Siems, and Sven Seuken.<br/>
-*In Proceedings of the AAAI Conference on Artificial Intelligence Vol 37. Washington DC, USA, 2023.*<br/>
-Full paper version including appendix: [[pdf](https://arxiv.org/abs/2208.14698)]
+**Machine Learning-powered Combinatorial Clock Auction**<br/>
+Ermis Soumalias, Jakob Weissteiner, Jakob Heiss, and Sven Seuken.<br/>
+Full paper version including appendix: [[pdf](https://arxiv.org/)]
 
 
 ## Requirements
